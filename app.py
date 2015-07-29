@@ -8,7 +8,7 @@ app = Flask('slack-invite')
 def index():
     return "Hello World!", 200
 
-@app.route('/invite')
+@app.route('/invite', methods=['POST'])
 def invite():
     return jsonify({'a': 'a'})
 
