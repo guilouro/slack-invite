@@ -21,7 +21,9 @@ class FlaskAppTestCase(unittest.TestCase):
     def test_post_invite(self):
         self.assertEqual(self.invite.status_code, 200)
 
-
+    def test_get_invite(self):
+        self.invite = self.client.get('/invite')
+        self.assertEqual(self.invite.status_code, 302)
 
 
 if __name__ == '__main__':
