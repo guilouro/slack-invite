@@ -21,8 +21,7 @@ class FlaskAppTestCase(unittest.TestCase):
     def test_post_invite(self):
         self.assertEqual(self.invite.status_code, 200)
 
-    def test_content_type(self):
-        self.assertEqual(self.invite.content_type, 'application/json')
+
 
 
 if __name__ == '__main__':

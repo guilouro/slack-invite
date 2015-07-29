@@ -1,0 +1,3 @@
+SLACK_GROUP = 'pythonbrasil'
+SLACK_TOKEN = 'xoxp-8064483091-8064250496-8099154530-e482b8'
+SLACK_URL = 'https://%s.slack.com' % SLACK_GROUP
