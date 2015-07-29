@@ -11,12 +11,11 @@ app = Flask('slack-invite')
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', group=config.SLACK_GROUP)
 
 
 @app.route('/invite', methods=['GET', 'POST', ])
 def invite():
-    # import ipdb; ipdb.set_trace()
     if request.method == 'POST':
         data = {
             'email': request.values['email'],
