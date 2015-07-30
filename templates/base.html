@@ -8,9 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         {# <link rel="stylesheet" href="css/normalize.css"> #}
-        {% compress 'css' %}
-        <link rel="stylesheet" type="text/sass" href="{{ url_for('static', filename='sass/style.sass') }}">
-        {% endcompress %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
     </head>
     <body>

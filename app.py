@@ -8,10 +8,6 @@ from flask import (
 )
 
 app = Flask('slack-invite')
-app.config['COMPRESSOR_DEBUG'] = app.config.get('DEBUG')
-app.config['COMPRESSOR_OUTPUT_DIR'] = './static/css'
-app.config['COMPRESSOR_STATIC_PREFIX'] = '/static/css'
-jac = JAC(app)
 
 
 @app.route('/')
