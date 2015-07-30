@@ -1,6 +1,7 @@
 # coding: utf-8
 
 import config
+import os
 import requests as consumer
 from flask import (
     Flask, request, jsonify, render_template, redirect
