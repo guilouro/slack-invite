@@ -1,2 +1,86 @@
+@import 'normalize'
+@import 'jeet/jeet'
+@import 'variables'
+
+
 body
-    background: #333
+    background-color: $default_color
+    width: 100%
+    height: 100%
+    font-family: $font-family
+
+header
+    position: relative
+    color: #fff
+    text-align: center
+    font-weight: 700
+    width: 100vw
+    font-size: 2rem
+    display: table-cell
+    vertical-align: middle
+    height: 20vh
+
+section
+    width: 100vw
+    height: 60vh
+    background-size: cover
+
+footer
+    @extend header
+    font-size: 0.8rem
+    font-weight: normal
+
+h1
+    color: #fff
+    font-size: 2rem
+
+a
+    color: lighten($default_color, 50%)
+    text-decoration: none
+
+    &:hover
+        color: lighten($default_color, 30%)
+
+
+.logo
+    @include j-align(both)
+    background: url(../img/header_logo_sprite@2x.png) left top/106px 60px no-repeat
+    height: 30px
+    width: 106px
+    float: left
+
+
+.backimg
+    background: $default_color url(../img/bg.jpg) no-repeat
+    background-size: cover
+    position: fixed
+    width: 100%
+    height: 100vh
+    z-index: -1
+    opacity: 0.2
+
+.item
+    width: 80vw
+    @include j-align(both)
+    text-align: center
+    top: 50vh
+
+input
+    padding: 15px 10px
+    margin: 10px 0
+    width: 300px
+    font-size: 1rem
+    border: none
+    border-top-left-radius: 8px
+    border-bottom-left-radius: 8px
+
+button
+    @extend input
+    width: 80px
+    background-color: darken($default_color, 20%)
+    color: #fff
+    padding-left: 10px
+    padding-right: 10px
+    border-radius: 0
+    border-top-right-radius: 8px
+    border-bottom-right-radius: 8px

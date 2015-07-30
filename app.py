@@ -12,7 +12,7 @@ app = Flask('slack-invite')
 
 @app.route('/')
 def index():
-    return render_template('index.html', group=config.SLACK_GROUP)
+    return render_template('index.html', config=config)
 
 
 @app.route('/invite', methods=['GET', 'POST', ])
@@ -29,7 +29,7 @@ def invite():
             params=data
         ).json()
 
-        return render_template('invite.html')
+        return render_template('invite.html', config=config, data=c)
     else:
         return redirect('/')
 

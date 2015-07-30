@@ -1,4 +1,14 @@
 {% extends "base.html" %}
 {% block title %}
-    Invite for group {{group}} in slack
+    Invite for community {{config.SLACK_GROUP}} in slack
 {% endblock title %}
+
+{% block content %}
+      <div class="item">
+        <h1>Join the  community <br> {{ config.SLACK_GROUP }} on Slack!</h1>
+        <form method="POST" action="/invite" id="join-form">
+          <input type="text" name="email" placeholder="Enter your email" id="slack-email">
+          <button><i class="fa fa-arrow-circle-right"></i></button>
+        </form>
+      </div>
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}
+    Invite for community {{config.SLACK_GROUP}} in slack
+{% endblock title %}
+
+{% block content %}
+     <div class="item">
+        {% if data['ok'] %}
+            <h1>Go to community!</h1>
+            <h2><a href="{{ config.SLACK_URL }}">{{ config.SLACK_URL }}</a></h2>
+        {% else %}
+            <h1>Sorry! {{ data['error']|replace('_', ' ') }}</h1>
+        {% endif %}
+     </div>
+{% endblock content %}
