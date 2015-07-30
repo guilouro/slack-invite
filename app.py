@@ -1,12 +1,17 @@
 # coding: utf-8
 
+import config
+import requests as consumer
+from jac.contrib.flask import JAC
 from flask import (
     Flask, request, jsonify, render_template, redirect
 )
-import requests as consumer
-import config
 
 app = Flask('slack-invite')
+app.config['COMPRESSOR_DEBUG'] = app.config.get('DEBUG')
+app.config['COMPRESSOR_OUTPUT_DIR'] = './static/css'
+app.config['COMPRESSOR_STATIC_PREFIX'] = '/static/css'
+jac = JAC(app)
 
 
 @app.route('/')
