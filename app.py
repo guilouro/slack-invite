@@ -4,7 +4,7 @@ import config
 import os
 import requests as consumer
 from flask import (
-    Flask, request, jsonify, render_template, redirect
+    Flask, request, jsonify, render_template, redirect, url_for
 )
 
 app = Flask('slack-invite')
@@ -12,6 +12,8 @@ app = Flask('slack-invite')
 
 @app.route('/')
 def index():
+    if not config.BG_FILENAME:
+        config.BG_FILENAME = url_for('static', filename='img/bg.jpg')
     return render_template('index.html', config=config)
 
 
