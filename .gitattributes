@@ -1,2 +1,2 @@
-slack-invite/static/* linguist-vendored
-slack-invite/templates/* linguist-vendored
+static/* linguist-vendored
+templates/* linguist-vendored
